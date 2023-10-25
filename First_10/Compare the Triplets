@@ -1,0 +1,16 @@
+public static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
+        int aAward = 0;
+        int bAward = 0;
+       for(int i = 0; i< a.size(); i++){
+            if(a.get(i) < b.get(i)){
+                bAward++;
+            }
+            if(a.get(i) > b.get(i)){
+                aAward++;
+            }
+        }
+        List<Integer> al = new ArrayList<>();
+        al.add(aAward);
+        al.add(bAward);
+        return al;
+    }
