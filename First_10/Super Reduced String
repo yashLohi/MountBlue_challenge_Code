@@ -1,0 +1,14 @@
+public static String superReducedString(String s) {
+    // Write your code here
+        Stack<Character> st = new Stack<>();
+        for(char c : s.toCharArray()){
+            if(st.isEmpty()) st.push(c);
+            else if(c == st.peek()) st.pop();
+            else st.push(c);
+        }
+        
+        StringBuilder res = new StringBuilder();
+        for(Character c : st) res.append(c);
+        
+        return res.length() == 0 ? "Empty String" : res.toString();
+    }
