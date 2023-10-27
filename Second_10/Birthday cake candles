@@ -1,0 +1,14 @@
+public static int birthdayCakeCandles(List<Integer> candles) {
+    // Write your code here
+        int max = Integer.MIN_VALUE;
+        
+        for(Integer candle : candles){
+            if(candle >= max) max = candle;
+        }
+        
+        int res = 0;
+        for(Integer candle : candles){
+            if(candle == max) res++;
+        }
+        return res;
+    }
