@@ -1,0 +1,8 @@
+public static long aVeryBigSum(List<Long> ar) {
+    // Write your code here
+        long ans = 0;
+        for(int i =0; i<ar.size(); i++){
+            ans += ar.get(i);
+        }
+        return ans;
+    }
