@@ -1,0 +1,16 @@
+public static int migratoryBirds(List<Integer> arr) {
+    // Write your code here
+        int hash[] = new int[5];
+        for(int i = 0; i<arr.size(); i++){
+            hash[arr.get(i) - 1]++;
+        }
+        int max = 0;
+        int ans = 0;
+        for(int i =0; i<hash.length; i++){
+            if(hash[i] > max){
+                max = hash[i];
+                ans = i+1;
+            }
+        }
+        return ans;
+    }
