@@ -1,0 +1,19 @@
+public static int countingValleys(int steps, String path) {
+    // Write your code here
+        int i=0, a=0, count = 0, temp = 0;
+        
+        while(i<steps){
+            if(path.charAt(i) == 'U'){
+                a++;
+            } else{
+                a--;
+            }
+            if(a < 0) temp = 1;
+            if(temp == 1 && a == 0){
+                count++;
+                temp = 0;
+            }
+            i++;
+        }
+        return count;
+    }
